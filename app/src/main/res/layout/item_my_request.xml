@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_circle"
+                    android:id="@+id/tv_blood_group"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"/>
+
+                <LinearLayout
+                    android:layout_toStartOf="@id/iv_delete"
+                    android:layout_toEndOf="@id/tv_blood_group"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_profile"
+                        app:drawableTint="#898989"
+                        android:drawablePadding="5dp"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:textSize="16sp"
+                        android:drawablePadding="5dp"
+                        app:drawableTint="#898989"
+                        android:gravity="center_vertical"
+                        app:drawableStartCompat="@drawable/ic_phone"
+                        android:maxLines="1"
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:contentDescription="@string/deleting"
+                    android:padding="13dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:id="@+id/iv_delete"
+                    android:src="@drawable/ic_delete"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:drawablePadding="5dp"
+                    app:drawableTint="#898989"
+                    android:gravity="center_vertical"
+                    app:drawableStartCompat="@drawable/ic_hospital"
+                    android:maxLines="1"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/tv_medical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:drawablePadding="5dp"
+                    app:drawableTint="#898989"
+                    android:gravity="center_vertical"
+                    app:drawableStartCompat="@drawable/ic_blood_type"
+                    android:maxLines="1"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/tv_unit_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:drawablePadding="5dp"
+                    app:drawableTint="#898989"
+                    app:drawableStartCompat="@drawable/ic_calender"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:drawablePadding="5dp"
+                    app:drawableTint="#898989"
+                    app:drawableStartCompat="@drawable/ic_location"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:drawablePadding="5dp"
+                    app:drawableTint="#898989"
+                    app:drawableStartCompat="@drawable/ic_details"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

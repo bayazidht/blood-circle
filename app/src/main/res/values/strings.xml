@@ -1,0 +1,242 @@
+<resources>
+    <string name="app_name" translatable="false">Blood Circle</string>
+
+    <string name="support_email" translatable="false">bloodcircle24@gmail.com</string>
+    <string name="english" translatable="false">Eng</string>
+    <string name="bangla" translatable="false">বাং</string>
+
+    <string name="wc_title_1">Find Blood Donor</string>
+    <string name="wc_subtitle_1">Find all blood donors at your fingertips according to your location and blood group</string>
+    <string name="wc_title2">Request for Blood</string>
+    <string name="wc_subtitle_2">Request for blood by uploading post for blood with patient details and location</string>
+    <string name="wc_title_3">Ambulance &amp; Emergency</string>
+    <string name="wc_subtitle_3">Find an ambulance, volunteers, and other emergency  contact information in your location quickly</string>
+    <string name="wc_4_subtitle">Set your preferred language and theme</string>
+
+    <string name="login_title">Welcome</string>
+    <string name="login_subtitle">Be the reason for someone\'s heartbeat, donate blood save life.</string>
+    <string name="login_btn_text">Signing with Google</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="gender">Gender</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="district">District</string>
+    <string name="address">Address</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="logout">Logout</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save">Save</string>
+    <string name="home">Home</string>
+    <string name="account">Account</string>
+    <string name="profile">Profile</string>
+    <string name="my_requests">My Requests</string>
+    <string name="become_a_donor">Become a Donor</string>
+    <string name="notifications">Notifications</string>
+    <string name="request_blood">Request Blood</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="medical_name">Medical Name</string>
+    <string name="unit_bag">Unit/Bag</string>
+    <string name="blood">Blood</string>
+    <string name="platelets">Platelets</string>
+    <string name="plasma">Plasma</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="patient_details">Patient Details</string>
+    <string name="upload">Upload</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="no_ambulance_found">No ambulance found!</string>
+    <string name="add_an_ambulance">Add an Ambulance</string>
+    <string name="donors_list">Donors List</string>
+    <string name="no_donor_found">No donor found!</string>
+    <string name="faq">Frequently Asked</string>
+    <string name="helpline">HelpLine</string>
+    <string name="add_new_request">Add New Request</string>
+    <string name="no_request_found">No request found!</string>
+    <string name="last_donation_date">Last Donation Date</string>
+    <string name="note">Note</string>
+    <string name="recent_requests">Recent Requests</string>
+    <string name="volunteers">Volunteers</string>
+    <string name="become_a_volunteer">Become a Volunteer</string>
+    <string name="no_volunteers_found">No volunteers found!</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="yes_delete">Yes, Delete</string>
+    <string name="no_cancel">No, Cancel</string>
+    <string name="delete_account_message">Are you sure you want to delete your account?\n\nAll of your data will be permanently deleted.\n</string>
+    <string name="select_date">Select Date</string>
+    <string name="enter_name">Enter name!</string>
+    <string name="enter_valid_email">Enter a valid email!</string>
+    <string name="enter_phone_number">Enter a phone number!</string>
+    <string name="select_blood_group">Select blood group!</string>
+    <string name="select_last_donation_date">Select last donation date!</string>
+    <string name="select_gender">Select gender!</string>
+    <string name="select_district">Select district!</string>
+    <string name="enter_address">Enter address!</string>
+    <string name="enter_note">Enter note!</string>
+    <string name="deleting">Deleting…</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="blood_bank">Blood Bank</string>
+    <string name="uploading">Uploading…</string>
+    <string name="select_time">Select Time</string>
+    <string name="enter_patient_details">Enter patient details!</string>
+    <string name="enter_medical_name">Enter medical name!</string>
+    <string name="enter_unit_bag">Enter unit/blood bag?</string>
+    <string name="delete_request">Delete Request</string>
+    <string name="delete_request_message">Are you sure you want to delete this request?</string>
+    <string name="last_donated">Last Donated</string>
+    <string name="available">Available</string>
+    <string name="not_available">Not Available</string>
+    <string name="donors">Donors</string>
+    <string name="requests">Requests</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="app_credit">App Credit</string>
+    <string name="app_credit_message">All information collected from app users. So all info credit goes to app users.
+        \n\nDeveloped By\nBHT Developer\n\nCopyright © 2025 Blood Circle\nVersion</string>
+    <string name="language">Language</string>
+    <string name="settings">Settings</string>
+    <string name="theme">Theme</string>
+    <string name="others">Others</string>
+    <string name="all_districts">All Districts</string>
+    <string name="all_groups">All Groups</string>
+    <string name="new_donor">New Donor</string>
+    <string name="days_remaining">"days remaining"</string>
+    <string name="add">Add</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="system">System</string>
+    <string name="enable_location_title">Enable Location</string>
+    <string name="enable_location_message">Please turn on Location to identify your current address.</string>
+    <string name="cancel">Cancel</string>
+    <string name="allow_location_title">Allow Location Permission</string>
+    <string name="allow_location_message">Please allow location permission to identify your current address.</string>
+    <string name="getting_your_location">Getting your location</string>
+    <string name="updating">Updating…</string>
+    <string name="profile_complete">Complete your profile first</string>
+    <string name="details">Details</string>
+    <string name="donatin_date">Donation Date</string>
+    <string name="call">Call</string>
+    <string name="message">Message</string>
+    <string name="uploaded_by">Uploaded by</string>
+    <string name="report">Report</string>
+    <string name="select_reason">Select Reason</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="submit">Submit</string>
+    <string name="report_sent">Report submitted successfully!</string>
+    <string name="submitting">Submitting…</string>
+    <string name="no_internet_message">No internet connection</string>
+    <string name="refresh">Refresh</string>
+    <string name="picture">Picture</string>
+    <string name="not_found">Not found!</string>
+    <string name="organization">Organization</string>
+    <string name="close">Close</string>
+    <string name="logout_message">Are you sure you want to logout?</string>
+    <string name="yes_logout">Yes, Logout</string>
+
+    <string-array name="districts">
+        <item>All Districts</item>
+        <item>Bagerhat</item>
+        <item>Bandarban</item>
+        <item>Barguna</item>
+        <item>Barisal</item>
+        <item>Bhola</item>
+        <item>Bogra</item>
+        <item>Brahmanbaria</item>
+        <item>Chandpur</item>
+        <item>Chittagong</item>
+        <item>Chuadanga</item>
+        <item>Comilla</item>
+        <item>Cox\'s Bazar</item>
+        <item>Dhaka</item>
+        <item>Dinajpur</item>
+        <item>Faridpur</item>
+        <item>Feni</item>
+        <item>Gaibandha</item>
+        <item>Gazipur</item>
+        <item>Gopalganj</item>
+        <item>Habiganj</item>
+        <item>Jamalpur</item>
+        <item>Jessore</item>
+        <item>Jhalokati</item>
+        <item>Jhenaidah</item>
+        <item>Joypurhat</item>
+        <item>Khagrachari</item>
+        <item>Khulna</item>
+        <item>Kishoreganj</item>
+        <item>Kurigram</item>
+        <item>Kushtia</item>
+        <item>Lakshmipur</item>
+        <item>Lalmonirhat</item>
+        <item>Madaripur</item>
+        <item>Magura</item>
+        <item>Manikganj</item>
+        <item>Maulvibazar</item>
+        <item>Meherpur</item>
+        <item>Munshiganj</item>
+        <item>Mymensingh</item>
+        <item>Naogaon</item>
+        <item>Narail</item>
+        <item>Narayanganj</item>
+        <item>Narsingdi</item>
+        <item>Natore</item>
+        <item>Nawabganj</item>
+        <item>Netrokona</item>
+        <item>Nilphamari</item>
+        <item>Noakhali</item>
+        <item>Pabna</item>
+        <item>Panchagarh</item>
+        <item>Patuakhali</item>
+        <item>Pirojpur</item>
+        <item>Rajbari</item>
+        <item>Rajshahi</item>
+        <item>Rangamati</item>
+        <item>Rangpur</item>
+        <item>Satkhira</item>
+        <item>Shariatpur</item>
+        <item>Sherpur</item>
+        <item>Sirajgonj</item>
+        <item>Sunamganj</item>
+        <item>Sylhet</item>
+        <item>Tangail</item>
+        <item>Thakurgaon</item>
+    </string-array>
+
+    <string-array name="blood_groups">
+        <item>All Groups</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="blood_types">
+        <item>@string/blood</item>
+        <item>@string/platelets</item>
+        <item>@string/plasma</item>
+    </string-array>
+
+    <string-array name="report_reasons">
+        <item>Demanded Money</item>
+        <item>Wrong Phone Number</item>
+        <item>Wrong Blood Group</item>
+        <item>Wrong Address</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

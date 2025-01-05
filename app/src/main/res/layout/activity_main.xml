@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Home.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:id="@+id/iv_menu"
+                android:padding="18dp"
+                android:src="@drawable/ic_menu"
+                android:layout_centerVertical="true"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                app:tint="?android:attr/textColorTertiary"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/iv_profile"
+                android:layout_toEndOf="@id/iv_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="-5dp"
+                    android:textSize="18sp"
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textSize="11sp"
+                    android:id="@+id/tv_user_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/iv_profile"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:padding="7dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="?attr/colorOutline"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                android:src="@drawable/ic_profile" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_above="@id/bottomNavigationView"
+            android:scrollbars="none"
+            android:layout_below="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <GridView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:drawSelectorOnTop="true"
+                    android:listSelector="?attr/actionBarItemBackground"
+                    android:scrollbars="none"
+                    android:id="@+id/grid_bloods"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:numColumns="4"
+                    tools:ignore="NestedScrolling" />
+
+                <GridView
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:drawSelectorOnTop="true"
+                    android:listSelector="?attr/actionBarItemBackground"
+                    android:scrollbars="none"
+                    android:id="@+id/grid_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="245dp"
+                    android:numColumns="3"
+                    tools:ignore="NestedScrolling" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            app:labelVisibilityMode="labeled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/menu_bottom_navigation"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add"
+            android:layout_marginBottom="-45dp"
+            android:contentDescription="@string/add"
+            android:src="@drawable/ic_add"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/bottomNavigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/navigation_drawer"
+        app:headerLayout="@layout/navigation_drawer_header"
+        app:menu="@menu/menu_navigation_drawer"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

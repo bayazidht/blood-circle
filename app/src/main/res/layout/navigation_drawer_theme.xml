@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButtonToggleGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/theme_toggle"
+    android:layout_width="wrap_content"
+    app:singleSelection="true"
+    app:selectionRequired="true"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btn_light"
+        style="@style/Button.OutlinedButton.Theme"
+        app:icon="@drawable/ic_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_dark"
+        style="@style/Button.OutlinedButton.Theme"
+        app:icon="@drawable/ic_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_system"
+        style="@style/Button.OutlinedButton.Theme"
+        app:icon="@drawable/ic_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</com.google.android.material.button.MaterialButtonToggleGroup>

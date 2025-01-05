@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.BloodCircle"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.Donors.DonorProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Requests.MyRequestsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Account.AccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Others.HelpLineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Others.FaqActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Others.OthersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Others.VolunteersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Others.WelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.Account.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Home.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Donors.DonorsActivity"
+            android:exported="false" />
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name=".Activity.Requests.RequestsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Requests.AddRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Account.ProfileActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

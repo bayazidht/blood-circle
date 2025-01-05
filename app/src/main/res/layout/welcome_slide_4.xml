@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_weight="5.5"
+        android:adjustViewBounds="true"
+        android:src="@drawable/wc_4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_weight="4.5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/theme_toggle"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <Button
+                android:text="@string/light"
+                android:id="@+id/btn_light"
+                style="?attr/materialButtonOutlinedStyle"
+                app:icon="@drawable/ic_light"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:text="@string/dark"
+                android:id="@+id/btn_dark"
+                style="?attr/materialButtonOutlinedStyle"
+                app:icon="@drawable/ic_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:text="@string/system"
+                android:id="@+id/btn_system"
+                style="?attr/materialButtonOutlinedStyle"
+                app:icon="@drawable/ic_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_marginTop="10dp"
+            android:id="@+id/language_toggle"
+            android:layout_width="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_english"
+                style="?attr/materialButtonOutlinedStyle"
+                android:text="English"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btn_bangla"
+                style="?attr/materialButtonOutlinedStyle"
+                android:text="বাংলা"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:ignore="HardcodedText" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:text="@string/settings"
+            android:textAlignment="center"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:text="@string/wc_4_subtitle"
+            android:textAlignment="center"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>
