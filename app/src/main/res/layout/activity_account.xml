@@ -140,7 +140,7 @@
                 android:paddingBottom="20dp"
                 android:drawablePadding="20dp"
                 app:drawableTint="?android:attr/textColorTertiary"
-                app:drawableStartCompat="@drawable/ic_history"
+                app:drawableStartCompat="@drawable/ic_recent"
                 app:drawableEndCompat="@drawable/ic_arrow_right"
                 android:id="@+id/tv_my_requests"
                 android:layout_width="match_parent"

@@ -281,9 +281,9 @@ public class MainActivity extends AppCompatActivity {
         GridView gridMenu = findViewById(R.id.grid_menu);
         ArrayList<GridMenuItem> gridMenuItems = new ArrayList<>();
 
-        gridMenuItems.add(new GridMenuItem(getString(R.string.become_a_donor), R.drawable.ic_donor));
-        gridMenuItems.add(new GridMenuItem(getString(R.string.become_a_donor), R.drawable.ic_donor));
-        gridMenuItems.add(new GridMenuItem(getString(R.string.become_a_donor), R.drawable.ic_donor));
+        gridMenuItems.add(new GridMenuItem(getString(R.string.donors), R.drawable.ic_donors));
+        gridMenuItems.add(new GridMenuItem(getString(R.string.recent_requests), R.drawable.ic_recent));
+        gridMenuItems.add(new GridMenuItem(getString(R.string.request_blood), R.drawable.ic_request));
         gridMenuItems.add(new GridMenuItem(getString(R.string.become_a_donor), R.drawable.ic_donor));
         gridMenuItems.add(new GridMenuItem(getString(R.string.organization), R.drawable.ic_organization));
         gridMenuItems.add(new GridMenuItem(getString(R.string.blood_bank), R.drawable.ic_blood_bank));
@@ -297,30 +297,46 @@ public class MainActivity extends AppCompatActivity {
         gridMenu.setOnItemClickListener((parent, view, position, id) -> {
             switch (position) {
                 case 0:
-                    startActivity(new Intent(this, AccountActivity.class));
+                    startActivity(new Intent(this, DonorsActivity.class));
                     break;
                 case 1:
+                    startActivity(new Intent(this, RequestsActivity.class));
+                    break;
+                case 2:
+                    if (sharedPref.getBoolean("is_profile_complete", false)) {
+                        startActivity(new Intent(this, AddRequestActivity.class));
+                    } else {
+                        Snackbar.make(view, R.string.profile_complete, Snackbar.LENGTH_LONG)
+                                .setAction(R.string.profile, v -> startActivity(new Intent(MainActivity.this, ProfileActivity.class)))
+                                .setAnchorView(findViewById(R.id.bottomNavigationView))
+                                .show();
+                    }
+                    break;
+                case 3:
+                    startActivity(new Intent(this, AccountActivity.class));
+                    break;
+                case 4:
                     Intent intent1 = new Intent(MainActivity.this, OthersActivity.class);
                     intent1.putExtra("collection_name", "organization");
                     intent1.putExtra("title", getString(R.string.organization));
                     startActivity(intent1);
                     break;
-                case 2:
+                case 5:
                     Intent intent2 = new Intent(MainActivity.this, OthersActivity.class);
                     intent2.putExtra("collection_name", "blood_bank");
                     intent2.putExtra("title", getString(R.string.blood_bank));
                     startActivity(intent2);
                     break;
-                case 3:
+                case 6:
                     startActivity(new Intent(this, VolunteersActivity.class));
                     break;
-                case 4:
+                case 7:
                     Intent intent4 = new Intent(MainActivity.this, OthersActivity.class);
                     intent4.putExtra("collection_name", "ambulance");
                     intent4.putExtra("title", getString(R.string.ambulance));
                     startActivity(intent4);
                     break;
-                case 5:
+                case 8:
                     startActivity(new Intent(this, HelpLineActivity.class));
                     break;
             }

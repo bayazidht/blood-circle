@@ -70,11 +70,11 @@
         </RelativeLayout>
 
         <ScrollView
-            android:layout_above="@id/bottomNavigationView"
+            android:layout_marginBottom="?attr/actionBarSize"
             android:scrollbars="none"
             android:layout_below="@+id/tool_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -95,7 +95,7 @@
                     tools:ignore="NestedScrolling" />
 
                 <GridView
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="50dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:drawSelectorOnTop="true"
@@ -103,7 +103,7 @@
                     android:scrollbars="none"
                     android:id="@+id/grid_menu"
                     android:layout_width="match_parent"
-                    android:layout_height="367dp"
+                    android:layout_height="365dp"
                     android:numColumns="3"
                     tools:ignore="NestedScrolling" />
 
@@ -111,24 +111,40 @@
 
         </ScrollView>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            app:labelVisibilityMode="labeled"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            app:menu="@menu/menu_bottom_navigation"/>
+            android:layout_height="match_parent"
+            tools:context=".Activity.Home.MainActivity">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:visibility="gone"
-            android:id="@+id/fab_add"
-            android:layout_marginBottom="-45dp"
-            android:contentDescription="@string/add"
-            android:src="@drawable/ic_add"
-            android:layout_centerHorizontal="true"
-            android:layout_above="@id/bottomNavigationView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fabAlignmentMode="center"
+                app:fabAnchorMode="cradle"
+                app:fabCradleMargin="10dp"
+                app:fabCradleRoundedCornerRadius="15dp"
+                android:layout_gravity="bottom">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottomNavigationView"
+                    android:background="@android:color/transparent"
+                    app:labelVisibilityMode="labeled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:menu="@menu/menu_bottom_navigation"/>
+
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@string/add"
+                app:layout_anchor="@id/bottomAppBar"/>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </RelativeLayout>
 
