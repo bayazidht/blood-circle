@@ -165,12 +165,12 @@ public class ProfileActivity extends AppCompatActivity {
                             tvName.setText(name);
                             tvEmail.setText(email);
                             tvPhone.setText(String.format("+88%s", phone));
-                            tvLastDate.setText(last_date);
+                            tvLastDate.setText(String.format("%s • %s", getString(R.string.last_donated), last_date));
                             tvAddress.setText(address);
                             tvNote.setText(note);
-                            tvBloodGroup.setText(getResources().getStringArray(R.array.blood_groups)[bloodGroup]);
-                            tvGender.setText((getResources().getStringArray(R.array.genders)[gender]));
-                            tvDistrict.setText(getResources().getStringArray(R.array.districts)[district]);
+                            tvBloodGroup.setText(String.format("%s (%s)", getResources().getString(R.string.blood_group), getResources().getStringArray(R.array.blood_groups)[bloodGroup]));
+                            tvGender.setText(String.format("%s • %s", getString(R.string.gender), getResources().getStringArray(R.array.genders)[gender]));
+                            tvDistrict.setText(String.format("%s • %s", getString(R.string.district), getResources().getStringArray(R.array.districts)[district]));
 
                             etName.setText(name);
                             etEmail.setText(email);

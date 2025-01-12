@@ -148,12 +148,12 @@ public class DonorProfileActivity extends AppCompatActivity {
                             tvName.setText(name);
                             tvEmail.setText(email);
                             tvPhone.setText(String.format("+88%s", phone));
-                            tvLastDate.setText(String.format("%s - %s", getString(R.string.last_donated), last_date));
-                            tvGender.setText(String.format("%s - %s", getString(R.string.gender), getResources().getStringArray(R.array.genders)[gender]));
+                            tvLastDate.setText(String.format("%s • %s", getString(R.string.last_donated), last_date));
+                            tvGender.setText(String.format("%s • %s", getString(R.string.gender), getResources().getStringArray(R.array.genders)[gender]));
                             tvAddress.setText(address);
                             tvNote.setText(note);
                             tvBloodGroup.setText(String.format(getResources().getString(R.string.blood_group)+" (%s)", getResources().getStringArray(R.array.blood_groups)[bloodGroup]));
-                            tvDistrict.setText(String.format("%s - %s", getString(R.string.district), getResources().getStringArray(R.array.districts)[district]));
+                            tvDistrict.setText(String.format("%s • %s", getString(R.string.district), getResources().getStringArray(R.array.districts)[district]));
 
                             setView(email, phone, imgUrl);
 

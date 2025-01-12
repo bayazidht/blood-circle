@@ -76,12 +76,12 @@ public class RequestBottomSheetDialog extends BottomSheetDialogFragment {
         tv_blood_group.setText(String.format(requireContext().getResources().getString(R.string.blood_group)+" (%s)", requireContext().getResources().getStringArray(R.array.blood_groups)[bloodGroup]));
         tv_unit_type.setText(String.format(getLocal(), "%d "+requireContext().getResources().getString(R.string.unit_bag)+" %s",
                 Integer.parseInt(unit), requireContext().getResources().getStringArray(R.array.blood_types)[type]));
-        tv_date_time.setText(String.format(requireContext().getString(R.string.donatin_date)+" - %s  %s", date, time));
+        tv_date_time.setText(String.format(requireContext().getString(R.string.donatin_date)+" • %s  %s", date, time));
         tv_district.setText(String.format("%s", requireContext().getResources().getStringArray(R.array.districts)[district]));
         tv_address.setText(address);
         tv_details.setText(details);
-        tv_by.setText(String.format(getString(R.string.uploaded_by)+" %s", email.split("@")[0]));
-        tv_uploaded_time.setText(String.format("%s", uploadedTime));
+        tv_by.setText(String.format("%s", email.split("@")[0]));
+        tv_uploaded_time.setText(String.format("%s  •", uploadedTime));
 
         tv_by.setOnClickListener(view -> {
             Intent intent = new Intent(requireContext(), DonorProfileActivity.class);

@@ -41,7 +41,7 @@
                     app:strokeWidth="1dp"
                     app:strokeColor="?attr/colorOutline"
                     app:shapeAppearanceOverlay="@style/circleImageView"
-                    app:srcCompat="@drawable/avatar_patient"/>
+                    app:srcCompat="@drawable/ic_avatar"/>
 
                 <LinearLayout
                     android:layout_marginStart="5dp"
@@ -54,7 +54,7 @@
                     <TextView
                         android:layout_marginStart="5dp"
                         android:maxLines="1"
-                        style="@style/TextAppearance.AppCompat.Medium"
+                        style="@style/TextAppearance.AppCompat.Title"
                         android:id="@+id/tv_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -78,10 +78,9 @@
                             app:iconPadding="5dp"
                             android:maxLines="1"
                             android:layout_width="0dp"
-                            android:layout_height="45dp"/>
+                            android:layout_height="48dp"/>
 
                         <Button
-                            android:maxLines="1"
                             android:layout_weight="1"
                             android:layout_marginStart="5dp"
                             style="@style/Widget.Material3.Button.OutlinedButton"
@@ -90,8 +89,9 @@
                             app:icon="@drawable/ic_phone"
                             app:iconGravity="textStart"
                             app:iconPadding="5dp"
+                            android:maxLines="1"
                             android:layout_width="0dp"
-                            android:layout_height="45dp"/>
+                            android:layout_height="48dp"/>
 
                     </LinearLayout>
 
@@ -179,29 +179,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <TextView
-                android:maxLines="1"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="5dp"
-                android:background="?selectableItemBackgroundBorderless"
-                android:textStyle="italic"
-                android:textColor="?android:attr/textColorLink"
-                android:drawablePadding="10dp"
-                android:padding="10dp"
-                app:drawableEndCompat="@drawable/ic_arrow_right"
-                android:textSize="16sp"
-                android:id="@+id/tv_by"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+           <LinearLayout
+               android:layout_marginTop="10dp"
+               android:gravity="end"
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_marginTop="-10dp"
-                android:layout_marginStart="15dp"
-                android:textStyle="italic"
-                android:alpha="0.5"
-                android:id="@+id/tv_uploaded_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+               <TextView
+                   android:layout_gravity="end|center_vertical"
+                   android:textStyle="italic"
+                   android:alpha="0.5"
+                   android:id="@+id/tv_uploaded_time"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:layout_gravity="end"
+                   android:maxLines="1"
+                   android:background="?selectableItemBackgroundBorderless"
+                   android:textStyle="italic"
+                   android:textColor="?android:attr/textColorLink"
+                   android:drawablePadding="10dp"
+                   android:padding="10dp"
+                   app:drawableEndCompat="@drawable/ic_arrow_right"
+                   android:textSize="16sp"
+                   android:id="@+id/tv_by"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
 
         </LinearLayout>
 

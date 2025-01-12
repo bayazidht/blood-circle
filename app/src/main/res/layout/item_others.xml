@@ -87,7 +87,7 @@
                         app:iconPadding="5dp"
                         android:maxLines="1"
                         android:layout_width="0dp"
-                        android:layout_height="45dp"/>
+                        android:layout_height="wrap_content"/>
 
                     <Button
                         android:maxLines="1"
@@ -100,7 +100,7 @@
                         app:iconGravity="textStart"
                         app:iconPadding="5dp"
                         android:layout_width="0dp"
-                        android:layout_height="45dp"/>
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
