@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="wc_title_1">রক্তদাতা খুঁজুন</string>
+    <string name="wc_subtitle_1">আপনার জেলা, ঠিকানা এবং রক্তের গ্রুপ অনুযায়ী সহজেই রক্তদাতাদের খুঁজুন</string>
+    <string name="wc_title2">রক্তের জন্য অনুরোধ</string>
+    <string name="wc_subtitle_2">রোগীর বিবরণ এবং অবস্থান সহ পোস্ট আপলোড করে রক্তের জন্য অনুরোধ করুন</string>
+    <string name="wc_title_3">অ্যাম্বুলেন্স এবং জরুরীসেবা</string>
+    <string name="wc_subtitle_3">আপনার অবস্থানে অ্যাম্বুলেন্স, সেচ্ছাসেবক এবং অন্যান্য জরুরি তথ্য সহজেই খুঁজুন</string>
+    <string name="wc_4_subtitle">আপনার পছন্দের ভাষা এবং থিম সেট করুন</string>
+
+    <string name="login_title">স্বাগতম</string>
+    <string name="login_subtitle">কারো হৃৎস্পন্দনের কারণ হোন, রক্তদান করুন জীবন বাঁচান।</string>
+    <string name="login_btn_text">গুগল দ্বারা লগইন করুন</string>
+    <string name="name">নাম</string>
+    <string name="email">ইমেইল</string>
+    <string name="phone">ফোন নাম্বার</string>
+    <string name="gender">লিঙ্গ</string>
+    <string name="blood_group">রক্তের গ্রুপ</string>
+    <string name="district">জেলা</string>
+    <string name="address">ঠিকানা</string>
+    <string name="delete_account">একাউন্ট ডিলিট</string>
+    <string name="logout">লগআউট</string>
+    <string name="edit_profile">প্রোপাইল এডিট করুন</string>
+    <string name="save">সংরক্ষণ</string>
+    <string name="home">হোম</string>
+    <string name="account">একাউন্ট</string>
+    <string name="profile">প্রোফাইল</string>
+    <string name="my_requests">আমার অনুরোধগুলো</string>
+    <string name="become_a_donor">রক্তদাতা হয়ে উঠুন</string>
+    <string name="notifications">নোটিফিকেশান</string>
+    <string name="request_blood">রক্তের অনুরোধ</string>
+    <string name="patient_name">রোগীর নাম</string>
+    <string name="medical_name">মেডিকেলের নাম</string>
+    <string name="unit_bag">ইউনিট/ব্যাগ</string>
+    <string name="blood">রক্ত</string>
+    <string name="platelets">প্লাটিলেট</string>
+    <string name="plasma">প্লাজমা</string>
+    <string name="date">তারিখ</string>
+    <string name="time">সময়</string>
+    <string name="patient_details">রোগীর বিবরণ</string>
+    <string name="upload">আপলোড</string>
+    <string name="ambulance">অ্যাম্বুলেন্স</string>
+    <string name="no_ambulance_found">কোন অ্যাম্বুলেন্স পাওয়া যায়নি!</string>
+    <string name="add_an_ambulance">অ্যাম্বুলেন্স যোগ করুন</string>
+    <string name="donors_list">রক্তদাতাদের তালিকা</string>
+    <string name="no_donor_found">কোন রক্তদাতা পাওয়া যায়নি!</string>
+    <string name="faq">সাধারণ জিজ্ঞাসা</string>
+    <string name="helpline">হেল্পলাইন</string>
+    <string name="add_new_request">নতুন অনুরোধ যোগ করুন</string>
+    <string name="no_request_found">কোন অনুরোধ পাওয়া যায়নি!</string>
+    <string name="last_donation_date">শেষ রক্তদানের তারিখ</string>
+    <string name="note">নোট</string>
+    <string name="recent_requests">সাম্প্রতিক অনুরোধ</string>
+    <string name="volunteers">স্বেচ্ছাসেবক</string>
+    <string name="become_a_volunteer">স্বেচ্ছাসেবক হয়ে উঠুন</string>
+    <string name="no_volunteers_found">কোন স্বেচ্ছাসেবক পাওয়া যায়নি!</string>
+    <string name="something_went_wrong">কিছু ত্রুটি হয়েছে!</string>
+    <string name="yes_delete">হ্যাঁ, মুছুন</string>
+    <string name="no_cancel">না, বাতিল করুন</string>
+    <string name="delete_account_message">আপনি কি আপনার অ্যাকাউন্ট মুছে ফেলার বিষয়ে নিশ্চিত?\n\nআপনার সমস্ত তথ্য স্থায়ীভাবে মুছে ফেলা হবে।\n</string>
+    <string name="select_date">তারিখ নির্বাচন করুন</string>
+    <string name="enter_name">নাম লিখুন!</string>
+    <string name="enter_valid_email">একটি বৈধ ইমেল লিখুন!</string>
+    <string name="enter_phone_number">ফোন নম্বর লিখুন!</string>
+    <string name="select_blood_group">রক্তের গ্রুপ নির্বাচন করুন!</string>
+    <string name="select_last_donation_date">শেষ রক্তদানের তারিখ নির্বাচন করুন!</string>
+    <string name="select_gender">লিঙ্গ নির্বাচন করুন!</string>
+    <string name="select_district">জেলা নির্বাচন করুন!</string>
+    <string name="enter_address">ঠিকানা লিখুন!</string>
+    <string name="enter_note">নোট লিখুন!</string>
+    <string name="deleting">মুছে ফেলা হচ্ছে…</string>
+    <string name="signing_in">সাইন ইন হচ্ছে…</string>
+    <string name="blood_bank">ব্লাড ব্যাংক</string>
+    <string name="uploading">আপলোড হচ্ছে…</string>
+    <string name="select_time">সময় নির্বাচন করুন</string>
+    <string name="enter_patient_details">রোগীর বিবরণ লিখুন!</string>
+    <string name="enter_medical_name">মেডিকেলের নাম লিখুন!</string>
+    <string name="enter_unit_bag">কত ইউনিট/ব্যাগ লাগবে?</string>
+    <string name="delete_request">অনুরোধ মুছুন</string>
+    <string name="delete_request_message">আপনি কি এই অনুরোধটি মুছে দেওয়ার বিষয়ে নিশ্চিত?</string>
+    <string name="last_donated">সর্বশেষ রক্তদান</string>
+    <string name="available">প্রস্তুত</string>
+    <string name="not_available">প্রস্তুত নয়</string>
+    <string name="donors">রক্তদাতা</string>
+    <string name="requests">অনুরোধ</string>
+    <string name="about_us">আমাদের সম্পর্কে</string>
+    <string name="contact_us">যোগাযোগ করুন</string>
+    <string name="share">শেয়ার করুন</string>
+    <string name="rate_us">আমাদেরকে রেটিং দিন</string>
+    <string name="privacy_policy">গোপনীয়তা নীতিমালা</string>
+    <string name="app_credit">অ্যাপ ক্রেডিট</string>
+    <string name="app_credit_message">অ্যাপ ব্যবহারকারীদের কাছ থেকে সংগৃহীত সমস্ত তথ্য। সুতরাং সমস্ত তথ্য ক্রেডিট অ্যাপ ব্যবহারকারীদের।
+        \n\nতৈরী করেছে\nBHT Developer\n\nকপিরাইট © ২০২৫ Blood Circle\nভার্সন</string>
+    <string name="language">ভাষা</string>
+    <string name="settings">সেটিংস</string>
+    <string name="theme">থিম</string>
+    <string name="others">অন্যান্য</string>
+    <string name="all_districts">সকল জেলা</string>
+    <string name="all_groups">সকল গ্রুপ</string>
+    <string name="new_donor">নতুন রক্তদাতা</string>
+    <string name="days_remaining">"দিন বাকি"</string>
+    <string name="add">যোগ করুন</string>
+    <string name="next">পরবর্তী</string>
+    <string name="previous">পূর্ববর্তী</string>
+    <string name="let_s_get_started">চলুন শুরু করা যাক</string>
+    <string name="light">লাইট</string>
+    <string name="dark">ডার্ক</string>
+    <string name="system">সিস্টেম</string>
+    <string name="enable_location_title">লোকেশন চালু করুন</string>
+    <string name="enable_location_message">আপনার বর্তমান অবস্থান সনাক্ত করতে লোকেশন চালু করুন।</string>
+    <string name="cancel">বাতিল করুন</string>
+    <string name="allow_location_title">লোকেশনের অনুমতি দিন</string>
+    <string name="allow_location_message">অনুগ্রহ করে আপনার বর্তমান ঠিকানা সনাক্ত করতে লোকেশনের অনুমতি দিন।</string>
+    <string name="getting_your_location">আপনার লোকেশন সনাক্ত হচ্ছে</string>
+    <string name="updating">আপডেট হচ্ছে…</string>
+    <string name="profile_complete">আগে আপনার প্রোফাইল সম্পূর্ণ করুন</string>
+    <string name="details">বিস্তারিত</string>
+    <string name="donatin_date">রক্তদানের তারিখ</string>
+    <string name="call">কল</string>
+    <string name="message">মেসেজ</string>
+    <string name="uploaded_by">আপলোড করেছে</string>
+    <string name="report">রিপোর্ট</string>
+    <string name="select_reason">কারণ নির্বাচন করুন</string>
+    <string name="enter_message">বার্তা লিখুন</string>
+    <string name="submit">জমা দিন</string>
+    <string name="report_sent">রিপোর্ট সফলভাবে জমা হয়েছে!</string>
+    <string name="submitting">জমা দেওয়া হচ্ছে…</string>
+    <string name="no_internet_message">ইন্টারনেট সংযোগ নেই</string>
+    <string name="refresh">রিফ্রেশ</string>
+    <string name="picture">ছবি</string>
+    <string name="not_found">পাওয়া যায়নি!</string>
+    <string name="organization">সংগঠন</string>
+    <string name="close">বন্ধ করুন</string>
+    <string name="logout_message">আপনি কি নিশ্চিত আপনি লগআউট করতে চান?</string>
+    <string name="yes_logout">হ্যাঁ, লগআউট</string>
+
+    <string-array name="districts">
+        <item>সকল জেলা</item>
+        <item>বাগেরহাট</item>
+        <item>বান্দরবান</item>
+        <item>বরগুনা</item>
+        <item>বরিশাল</item>
+        <item>ভোলা</item>
+        <item>বগুড়া</item>
+        <item>ব্রাহ্মণবাড়িয়া</item>
+        <item>চাঁদপুর</item>
+        <item>চট্টগ্রাম</item>
+        <item>চুয়াডাঙ্গা</item>
+        <item>কুমিল্লা</item>
+        <item>কক্সবাজার</item>
+        <item>ঢাকা</item>
+        <item>দিনাজপুর</item>
+        <item>ফরিদপুর</item>
+        <item>ফেনী</item>
+        <item>গাইবান্ধা</item>
+        <item>গাজীপুর</item>
+        <item>গোপালগঞ্জ</item>
+        <item>হবিগঞ্জ</item>
+        <item>জামালপুর</item>
+        <item>যশোর</item>
+        <item>ঝালকাঠি</item>
+        <item>ঝিনাইদহ</item>
+        <item>জয়পুরহাট</item>
+        <item>খাগড়াছড়ি</item>
+        <item>খুলনা</item>
+        <item>কিশোরগঞ্জ</item>
+        <item>কুড়িগ্রাম</item>
+        <item>কুষ্টিয়া</item>
+        <item>লক্ষ্মীপুর</item>
+        <item>লালমনিরহাট</item>
+        <item>মাদারীপুর</item>
+        <item>মাগুরা</item>
+        <item>মানিকগঞ্জ</item>
+        <item>মৌলভীবাজার</item>
+        <item>মেহেরপুর</item>
+        <item>মুন্সীগঞ্জ</item>
+        <item>ময়মনসিংহ</item>
+        <item>নওগাঁ</item>
+        <item>নড়াইল</item>
+        <item>নারায়ণগঞ্জ</item>
+        <item>নরসিংদী</item>
+        <item>নাটোর</item>
+        <item>নবাবগঞ্জ</item>
+        <item>নেত্রকোনা</item>
+        <item>নীলফামারী</item>
+        <item>নোয়াখালী</item>
+        <item>পাবনা</item>
+        <item>পঞ্চগড়</item>
+        <item>পটুয়াখালী</item>
+        <item>পিরোজপুর</item>
+        <item>রাজবাড়ী</item>
+        <item>রাজশাহী</item>
+        <item>রাঙামাটি</item>
+        <item>রংপুর</item>
+        <item>সাতক্ষীরা</item>
+        <item>শরীয়তপুর</item>
+        <item>শেরপুর</item>
+        <item>সিরাজগঞ্জ</item>
+        <item>সুনামগঞ্জ</item>
+        <item>সিলেট</item>
+        <item>টাঙ্গাইল</item>
+        <item>ঠাকুরগাঁও</item>
+    </string-array>
+
+    <string-array name="blood_groups">
+        <item>সকল গ্রুপ</item>
+        <item>এ+</item>
+        <item>এ-</item>
+        <item>বি+</item>
+        <item>বি-</item>
+        <item>এবি+</item>
+        <item>এবি-</item>
+        <item>ও+</item>
+        <item>ও-</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item>পুরুষ</item>
+        <item>মহিলা</item>
+        <item>অন্যান্য</item>
+    </string-array>
+
+    <string-array name="blood_types">
+        <item>@string/blood</item>
+        <item>@string/platelets</item>
+        <item>@string/plasma</item>
+    </string-array>
+
+    <string-array name="report_reasons">
+        <item>টাকা দাবি করেছে</item>
+        <item>ভুল ফোন নম্বর</item>
+        <item>ভুল ব্লাড গ্রুপ</item>
+        <item>ভুল ঠিকানা</item>
+        <item>অন্যান্য</item>
+    </string-array>
+
+</resources>

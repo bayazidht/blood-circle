@@ -46,7 +46,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButtonToggleGroup;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -72,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences sharedPref;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-    private FloatingActionButton fabAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,28 +107,17 @@ public class MainActivity extends AppCompatActivity {
             int id = item.getItemId();
             if (id == R.id.nav_home) {
                 return true;
-            } else if (id == R.id.nav_donors) {
-                startActivity(new Intent(this, DonorsActivity.class));
-            } else if (id == R.id.nav_requests) {
-                startActivity(new Intent(this, RequestsActivity.class));
+            } else if (id == R.id.nav_notifications) {
+                Snackbar.make(findViewById(R.id.main),"You do not have any notifications!", Snackbar.LENGTH_SHORT)
+                        .setAction(R.string.close, v -> {})
+                        .setAnchorView(findViewById(R.id.bottomNavigationView))
+                        .show();
             } else if (id == R.id.nav_account) {
                 startActivity(new Intent(this, AccountActivity.class));
             }
             return false;
         });
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
-
-        fabAdd = findViewById(R.id.fab_add);
-        fabAdd.setOnClickListener(view -> {
-            if (sharedPref.getBoolean("is_profile_complete", false)) {
-                startActivity(new Intent(this, AddRequestActivity.class));
-            } else {
-                Snackbar.make(view, R.string.profile_complete, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.profile, v -> startActivity(new Intent(MainActivity.this, ProfileActivity.class)))
-                        .setAnchorView(fabAdd)
-                        .show();
-            }
-        });
     }
 
     private void setNavDrawer() {
