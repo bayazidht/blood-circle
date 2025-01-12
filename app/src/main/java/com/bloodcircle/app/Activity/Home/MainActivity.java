@@ -118,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
             return false;
         });
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
+
+        bottomNavigationView.getOrCreateBadge(R.id.nav_notifications).setNumber(0);
     }
 
     private void setNavDrawer() {
@@ -270,7 +272,7 @@ public class MainActivity extends AppCompatActivity {
 
         gridMenuItems.add(new GridMenuItem(getString(R.string.donors), R.drawable.ic_donors));
         gridMenuItems.add(new GridMenuItem(getString(R.string.recent_requests), R.drawable.ic_recent));
-        gridMenuItems.add(new GridMenuItem(getString(R.string.request_blood), R.drawable.ic_request));
+        gridMenuItems.add(new GridMenuItem(getString(R.string.request), R.drawable.ic_request));
         gridMenuItems.add(new GridMenuItem(getString(R.string.become_a_donor), R.drawable.ic_donor));
         gridMenuItems.add(new GridMenuItem(getString(R.string.organization), R.drawable.ic_organization));
         gridMenuItems.add(new GridMenuItem(getString(R.string.blood_bank), R.drawable.ic_blood_bank));

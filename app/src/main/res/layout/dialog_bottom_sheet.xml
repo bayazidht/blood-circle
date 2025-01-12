@@ -41,7 +41,7 @@
                     app:strokeWidth="1dp"
                     app:strokeColor="?attr/colorOutline"
                     app:shapeAppearanceOverlay="@style/circleImageView"
-                    app:srcCompat="@drawable/ic_avatar"/>
+                    app:srcCompat="@drawable/avatar_patient"/>
 
                 <LinearLayout
                     android:layout_marginStart="5dp"
