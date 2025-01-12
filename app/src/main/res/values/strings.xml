@@ -2,8 +2,8 @@
     <string name="app_name" translatable="false">Blood Circle</string>
 
     <string name="support_email" translatable="false">bloodcircle24@gmail.com</string>
-    <string name="english" translatable="false">Eng</string>
-    <string name="bangla" translatable="false">বাং</string>
+    <string name="english" translatable="false">English</string>
+    <string name="bangla" translatable="false">বাংলা</string>
 
     <string name="wc_title_1">Find Blood Donor</string>
     <string name="wc_subtitle_1">Find all blood donors at your fingertips according to your location and blood group</string>

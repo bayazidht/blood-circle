@@ -282,6 +282,9 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<GridMenuItem> gridMenuItems = new ArrayList<>();
 
         gridMenuItems.add(new GridMenuItem(getString(R.string.become_a_donor), R.drawable.ic_donor));
+        gridMenuItems.add(new GridMenuItem(getString(R.string.become_a_donor), R.drawable.ic_donor));
+        gridMenuItems.add(new GridMenuItem(getString(R.string.become_a_donor), R.drawable.ic_donor));
+        gridMenuItems.add(new GridMenuItem(getString(R.string.become_a_donor), R.drawable.ic_donor));
         gridMenuItems.add(new GridMenuItem(getString(R.string.organization), R.drawable.ic_organization));
         gridMenuItems.add(new GridMenuItem(getString(R.string.blood_bank), R.drawable.ic_blood_bank));
         gridMenuItems.add(new GridMenuItem(getString(R.string.volunteers), R.drawable.ic_volunteer));
