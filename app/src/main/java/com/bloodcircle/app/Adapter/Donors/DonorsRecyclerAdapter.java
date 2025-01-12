@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,6 +18,7 @@ import com.bloodcircle.app.Model.Donors.DonorsItem;
 import com.bloodcircle.app.R;
 import com.bloodcircle.app.Tools.Config;
 import com.bloodcircle.app.Tools.LocaleHelper;
+import com.bumptech.glide.Glide;
 import com.tashila.pleasewait.PleaseWaitDialog;
 
 import java.text.ParseException;
@@ -54,12 +56,16 @@ public class DonorsRecyclerAdapter extends RecyclerView.Adapter<DonorsRecyclerAd
         holder.tvDistrict.setText(String.format("%s", mContext.getResources().getStringArray(R.array.districts)[item.getDistrict()]));
         holder.tvAddress.setText(String.format("%s", item.getAddress()));
 
+        Glide.with(mContext)
+                .load(item.getImgUrl())
+                .placeholder(R.drawable.ic_avatar)
+                .circleCrop()
+                .into(holder.ivImg);
+
         PleaseWaitDialog pleaseWaitDialog = new PleaseWaitDialog(mContext);
         pleaseWaitDialog.setCancelable(false);
 
-        if (item.getLast_date().equals("0")) {
-            ready(holder);
-        } else {
+        if (!item.getLast_date().equals("0")) {
             try {
                 SimpleDateFormat sdf = new SimpleDateFormat(Config.DATE_FORMAT, Locale.getDefault());
 
@@ -72,8 +78,10 @@ public class DonorsRecyclerAdapter extends RecyclerView.Adapter<DonorsRecyclerAd
                 long diff = startDate - endDate;
                 long days = 120-(diff/(24*60*60*1000));
 
-                if (days<=0) ready(holder);
-                else holder.tvStatus.setText(String.format(getLocal(),"%d %s", days, mContext.getString(R.string.days_remaining)));
+                if (days>0) {
+                    holder.tvStatus.setText(String.format(getLocal(),"%d %s", days, mContext.getString(R.string.days_remaining)));
+                    holder.tvStatus.setTextColor(Color.parseColor("#EA4738"));
+                }
             } catch (ParseException e) {
                 throw new RuntimeException(e);
             }
@@ -84,11 +92,6 @@ public class DonorsRecyclerAdapter extends RecyclerView.Adapter<DonorsRecyclerAd
             intent.putExtra("id", item.getId());
             mContext.startActivity(intent);
         });
-    }
-
-    private void ready(ViewHolder holder) {
-        holder.tvStatus.setText(mContext.getString(R.string.available));
-        holder.tvStatus.setTextColor(Color.parseColor("#4CAF50"));
     }
 
     private Locale getLocal() {
@@ -104,6 +107,7 @@ public class DonorsRecyclerAdapter extends RecyclerView.Adapter<DonorsRecyclerAd
 
         private final TextView tvBloodGroup, tvName, tvPhone, tvStatus, tvLastDate, tvDistrict, tvAddress;
         private final LinearLayout llDonor;
+        private final ImageView ivImg;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -115,6 +119,7 @@ public class DonorsRecyclerAdapter extends RecyclerView.Adapter<DonorsRecyclerAd
             tvDistrict = itemView.findViewById(R.id.tv_district);
             tvAddress = itemView.findViewById(R.id.tv_address);
             llDonor = itemView.findViewById(R.id.ll_donor);
+            ivImg = itemView.findViewById(R.id.iv_img);
         }
     }
 

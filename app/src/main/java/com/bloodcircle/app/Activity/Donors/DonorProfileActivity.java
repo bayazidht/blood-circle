@@ -13,13 +13,13 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.bloodcircle.app.R;
 import com.bloodcircle.app.Tools.NetworkHelper;
+import com.bumptech.glide.Glide;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,7 +33,7 @@ import java.util.Objects;
 
 public class DonorProfileActivity extends AppCompatActivity {
 
-    private TextView tvName, tvEmail, tvPhone, tvBloodGroup, tvLastDate, tvDistrict, tvAddress, tvNote;
+    private TextView tvName, tvEmail, tvPhone, tvBloodGroup, tvLastDate, tvGender, tvDistrict, tvAddress, tvNote;
     private ImageView ivProfile;
 
     @Override
@@ -55,6 +55,7 @@ public class DonorProfileActivity extends AppCompatActivity {
         tvPhone = findViewById(R.id.tv_phone);
         tvBloodGroup = findViewById(R.id.tv_blood_group);
         tvLastDate = findViewById(R.id.tv_last_date);
+        tvGender = findViewById(R.id.tv_gender);
         tvDistrict = findViewById(R.id.tv_district);
         tvAddress = findViewById(R.id.tv_address);
         tvNote = findViewById(R.id.tv_note);
@@ -76,7 +77,6 @@ public class DonorProfileActivity extends AppCompatActivity {
         builder.setView(v);
 
         TextInputLayout etMessage = v.findViewById(R.id.et_message);
-
 
         AutoCompleteTextView acReasons = v.findViewById(R.id.ac_reasons);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.report_reasons));
@@ -143,17 +143,19 @@ public class DonorProfileActivity extends AppCompatActivity {
 
                             String address = document.getString("address");
                             String note = document.getString("note");
+                            String imgUrl = document.getString("img_url");
 
                             tvName.setText(name);
                             tvEmail.setText(email);
                             tvPhone.setText(String.format("+88%s", phone));
                             tvLastDate.setText(String.format("%s - %s", getString(R.string.last_donated), last_date));
+                            tvGender.setText(String.format("%s - %s", getString(R.string.gender), getResources().getStringArray(R.array.genders)[gender]));
                             tvAddress.setText(address);
                             tvNote.setText(note);
-                            tvBloodGroup.setText(getResources().getStringArray(R.array.blood_groups)[bloodGroup]);
-                            tvDistrict.setText(getResources().getStringArray(R.array.districts)[district]);
+                            tvBloodGroup.setText(String.format(getResources().getString(R.string.blood_group)+" (%s)", getResources().getStringArray(R.array.blood_groups)[bloodGroup]));
+                            tvDistrict.setText(String.format("%s - %s", getString(R.string.district), getResources().getStringArray(R.array.districts)[district]));
 
-                            setView(email, phone, gender);
+                            setView(email, phone, imgUrl);
 
                             findViewById(R.id.details_layout).setVisibility(View.VISIBLE);
                         } else {
@@ -167,9 +169,12 @@ public class DonorProfileActivity extends AppCompatActivity {
                 .addOnFailureListener(e -> Toast.makeText(this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show());
     }
 
-    private void setView(String email, String phone, int gender) {
-        if (gender == 0) ivProfile.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.avatar_male, null));
-        else if (gender == 1) ivProfile.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.avatar_female, null));
+    private void setView(String email, String phone, String imgUrl) {
+        Glide.with(this)
+                .load(imgUrl)
+                .placeholder(R.drawable.ic_avatar)
+                .circleCrop()
+                .into(ivProfile);
 
         findViewById(R.id.iv_call).setOnClickListener(view -> startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:+88"+phone))));
 

@@ -9,8 +9,9 @@ public class DonorsItem {
     public int bloodGroup;
     public int district;
     public String address;
+    public String imgUrl;
 
-    public DonorsItem(String id, String name, String phone, String last_date, int bloodGroup, int district, String address) {
+    public DonorsItem(String id, String name, String phone, String last_date, int bloodGroup, int district, String address, String imgUrl) {
         this.id = id;
         this.name = name;
         this.phone = phone;
@@ -18,6 +19,7 @@ public class DonorsItem {
         this.bloodGroup = bloodGroup;
         this.district = district;
         this.address = address;
+        this.imgUrl = imgUrl;
     }
 
     public String getId() {
@@ -74,5 +76,13 @@ public class DonorsItem {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }

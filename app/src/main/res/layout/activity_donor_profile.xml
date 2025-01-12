@@ -64,22 +64,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:id="@+id/iv_profile"
-                app:contentPadding="5dp"
-                android:padding="5dp"
-                app:strokeWidth="1dp"
-                app:strokeColor="?attr/colorOutline"
-                app:shapeAppearanceOverlay="@style/circleImageView"
-                app:srcCompat="@drawable/ic_profile"/>
+                android:contentDescription="@string/profile"
+                app:srcCompat="@drawable/ic_avatar"/>
 
             <TextView
                 style="@style/TextAppearance.AppCompat.Medium"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
                 android:textStyle="bold"
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
@@ -214,6 +211,25 @@
                         app:drawableStartCompat="@drawable/ic_calender"
                         android:textSize="16sp"
                         android:id="@+id/tv_last_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:alpha="0.5"
+                        android:background="?attr/colorOutline"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"/>
+
+                    <TextView
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:drawablePadding="20dp"
+                        app:drawableTint="?attr/colorPrimary"
+                        app:drawableStartCompat="@drawable/ic_people"
+                        android:textSize="16sp"
+                        android:id="@+id/tv_gender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 

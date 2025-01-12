@@ -220,6 +220,7 @@ public class ProfileActivity extends AppCompatActivity {
         note.put("district", district);
         note.put("address", etAddress.getText().toString());
         note.put("note", etNote.getText().toString());
+        note.put("img_url", Objects.requireNonNull(currentUser.getPhotoUrl()).toString());
         note.put("donate", sharedPref.getBoolean("donate", false));
         note.put("volunteer", sharedPref.getBoolean("volunteer", false));
 

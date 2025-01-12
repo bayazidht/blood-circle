@@ -132,8 +132,9 @@ public class DonorsActivity extends AppCompatActivity {
                             int bloodGroup = Objects.requireNonNull(document.getDouble("blood_group")).intValue();
                             int district = Objects.requireNonNull(document.getDouble("district")).intValue();
                             String address = document.getString("address");
+                            String imgUrl = document.getString("img_url");
 
-                            mDonorsList.add(new DonorsItem(id, name, phone, last_date, bloodGroup, district, address));
+                            mDonorsList.add(new DonorsItem(id, name, phone, last_date, bloodGroup, district, address, imgUrl));
                             mAdapter.notifyDataSetChanged();
                         }
                         if (mDonorsList.isEmpty()) findViewById(R.id.empty_view).setVisibility(View.VISIBLE);
