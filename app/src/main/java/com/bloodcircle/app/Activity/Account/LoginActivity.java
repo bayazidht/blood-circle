@@ -22,7 +22,6 @@ import androidx.credentials.exceptions.GetCredentialException;
 
 import com.bloodcircle.app.Activity.Home.MainActivity;
 import com.bloodcircle.app.R;
-import com.bloodcircle.app.Tools.LocaleHelper;
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption;
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential;
 import com.google.firebase.auth.AuthCredential;
@@ -36,7 +35,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new LocaleHelper(this).setAppLocale();
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

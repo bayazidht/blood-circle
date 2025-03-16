@@ -42,7 +42,6 @@ public class DonorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new LocaleHelper(this).setAppLocale();
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_donors);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

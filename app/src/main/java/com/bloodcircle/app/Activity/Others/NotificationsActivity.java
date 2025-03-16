@@ -22,5 +22,6 @@ public class NotificationsActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        findViewById(R.id.iv_back).setOnClickListener(view -> finish());
     }
 }

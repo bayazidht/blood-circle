@@ -17,7 +17,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.bloodcircle.app.Activity.Requests.MyRequestsActivity;
 import com.bloodcircle.app.R;
-import com.bloodcircle.app.Tools.LocaleHelper;
 import com.bloodcircle.app.Tools.NetworkHelper;
 import com.bumptech.glide.Glide;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -40,7 +39,6 @@ public class AccountActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new LocaleHelper(this).setAppLocale();
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_account);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

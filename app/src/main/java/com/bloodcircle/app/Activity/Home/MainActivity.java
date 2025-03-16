@@ -22,6 +22,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.bloodcircle.app.Activity.Account.AccountActivity;
 import com.bloodcircle.app.Activity.Donors.DonorsActivity;
+import com.bloodcircle.app.Activity.Others.NotificationsActivity;
 import com.bloodcircle.app.Activity.Requests.AddRequestActivity;
 import com.bloodcircle.app.Activity.Requests.RequestsActivity;
 import com.bloodcircle.app.Adapter.Grid.GridBloodsAdapter;
@@ -96,10 +97,7 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.nav_home) {
                 return true;
             } else if (id == R.id.nav_notifications) {
-                Snackbar.make(findViewById(R.id.main),"You do not have any notifications!", Snackbar.LENGTH_SHORT)
-                        .setAction(R.string.close, v -> {})
-                        .setAnchorView(findViewById(R.id.bottomNavigationView))
-                        .show();
+                startActivity(new Intent(this, NotificationsActivity.class));
             } else if (id == R.id.nav_account) {
                 startActivity(new Intent(this, AccountActivity.class));
             }

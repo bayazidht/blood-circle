@@ -135,6 +135,7 @@
     <string name="logout_message">আপনি কি নিশ্চিত আপনি লগআউট করতে চান?</string>
     <string name="yes_logout">হ্যাঁ, লগআউট</string>
     <string name="update">আপডেট করুন</string>
+    <string name="no_notification">আপনার কোনো নোটিফিকেশন নেই</string>
 
     <string-array name="districts">
         <item>সকল জেলা</item>

@@ -31,7 +31,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bloodcircle.app.R;
 import com.bloodcircle.app.Tools.Config;
 import com.bloodcircle.app.Tools.GpsHelper;
-import com.bloodcircle.app.Tools.LocaleHelper;
 import com.bloodcircle.app.Tools.NetworkHelper;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -77,7 +76,6 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new LocaleHelper(this).setAppLocale();
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_profile);
         findViewById(R.id.iv_back).setOnClickListener(view -> finish());

@@ -36,7 +36,6 @@
     </RelativeLayout>
 
     <ScrollView
-        android:layout_above="@id/btn_upload"
         android:layout_below="@id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -255,17 +254,16 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <Button
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/upload"
+                android:id="@+id/btn_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
 
     </ScrollView>
-
-    <Button
-        android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
-        android:text="@string/upload"
-        android:id="@+id/btn_upload"
-        android:layout_alignParentEnd="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
 </RelativeLayout>
