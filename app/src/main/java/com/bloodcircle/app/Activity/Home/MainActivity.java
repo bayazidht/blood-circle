@@ -12,9 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.IntentSenderRequest;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
@@ -42,21 +39,12 @@ import com.bloodcircle.app.Tools.LocaleHelper;
 import com.bloodcircle.app.Activity.Others.VolunteersActivity;
 import com.bloodcircle.app.Tools.ThemeHelper;
 import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButtonToggleGroup;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.android.play.core.appupdate.AppUpdateInfo;
-import com.google.android.play.core.appupdate.AppUpdateManager;
-import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
-import com.google.android.play.core.appupdate.AppUpdateOptions;
-import com.google.android.play.core.install.InstallStateUpdatedListener;
-import com.google.android.play.core.install.model.AppUpdateType;
-import com.google.android.play.core.install.model.InstallStatus;
-import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -382,33 +370,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkAppUpdate () {
-        AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(this);
-        Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
-        appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
-            if (appUpdateInfo.installStatus() == InstallStatus.DOWNLOADED) {
-                appUpdateManager.completeUpdate();
-            } else {
-                if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
-                        && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
-                    appUpdateManager.startUpdateFlowForResult(
-                            appUpdateInfo,
-                            appUpdateResultLauncher,
-                            AppUpdateOptions.newBuilder(AppUpdateType.FLEXIBLE).build()
-                    );
-                }
-            }
-        });
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("app").document("app_update")
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        DocumentSnapshot document = task.getResult();
+                        if (document.exists()) {
+                            int version_code = Objects.requireNonNull(document.getLong("version_code")).intValue();
+                            String title = document.getString("title");
+                            String message = document.getString("message");
+                            boolean flexible = Boolean.TRUE.equals(document.getBoolean("flexible"));
 
-        InstallStateUpdatedListener listener = state -> {
-            if (state.installStatus() == InstallStatus.DOWNLOADED) {
-                appUpdateManager.completeUpdate();
-            }
-        };
-        appUpdateManager.registerListener(listener);
+                            if (version_code > BuildConfig.VERSION_CODE) {
+                                MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(MainActivity.this);
+                                builder.setTitle(title);
+                                builder.setMessage(message);
+                                builder.setPositiveButton(R.string.update, (dialogInterface, i) -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id="+getPackageName()))));
+                                if (flexible) builder.setNegativeButton(R.string.cancel, null);
+                                builder.setCancelable(flexible);
+                                builder.show();
+                            }
+                        }
+                    } else {
+                        Toast.makeText(this, getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
-
-    ActivityResultLauncher<IntentSenderRequest> appUpdateResultLauncher =  registerForActivityResult(
-            new ActivityResultContracts.StartIntentSenderForResult(), result -> {}
-    );
 
 }

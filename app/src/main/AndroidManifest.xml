@@ -17,6 +17,9 @@
         android:theme="@style/Base.Theme.BloodCircle"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.Others.NotificationsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.Donors.DonorProfileActivity"
             android:exported="false" />
         <activity
@@ -56,8 +59,8 @@
             android:name=".Activity.Donors.DonorsActivity"
             android:exported="false" />
         <activity
-            android:configChanges="orientation|screenSize"
             android:name=".Activity.Requests.RequestsActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".Activity.Requests.AddRequestActivity"
