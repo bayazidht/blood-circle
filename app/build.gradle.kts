@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace = "com.bloodcircle.app"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.bloodcircle.app"
         minSdk = 24
-        targetSdk = 35
-        versionCode = 29
-        versionName = "1.2.9"
+        targetSdk = 36
+        versionCode = 30
+        versionName = "1.3.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -34,9 +34,13 @@ android {
         viewBinding = true
     }
 
+    androidResources {
+        localeFilters.addAll(listOf("en", "bn"))
+    }
+
     bundle {
         language {
-            //enableSplit = false
+            enableSplit = false
         }
     }
 }
