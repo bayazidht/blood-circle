@@ -11,8 +11,8 @@ android {
         applicationId = "com.bloodcircle.app"
         minSdk = 24
         targetSdk = 36
-        versionCode = 30
-        versionName = "1.3.0"
+        versionCode = 31
+        versionName = "1.3.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -34,9 +34,9 @@ android {
         viewBinding = true
     }
 
-    androidResources {
-        localeFilters.addAll(listOf("en", "bn"))
-    }
+//    androidResources {
+//        localeFilters.addAll(listOf("en", "bn"))
+//    }
 
     bundle {
         language {
